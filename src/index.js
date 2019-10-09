@@ -35,7 +35,7 @@ class NavBar extends Component {
               <i className="ion-ionic"></i>
             </span>
         </div>
-    </nav>
+      </nav>
     )
   }
 }
