@@ -57,7 +57,7 @@ class TileContainer extends Component {
     // From original HTML (inline styles)
     let styles = {
       marginTop: '40px',
-      marginRight: '10px',
+      marginLeft: '10px',
       marginBottom: '40px'
     }
 
