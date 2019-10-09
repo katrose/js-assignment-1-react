@@ -41,7 +41,7 @@ class NavBar extends Component {
 
 class TileContainer extends Component {
   render() {
-    
+
     let tiles = [];
 
     this.props.data.forEach((article) => {
@@ -78,9 +78,10 @@ class Tile extends Component {
     let topic = this.props.topic;
     let title = this.props.title;
     let price = "Read for " + this.props.price;
+    let color = this.props.color;
 
     return(
-      <div className="card">
+      <div className="card" style={{backgroundColor: color}}>
         <p className="topic">{topic}</p>
         <h2 className="title">{title}</h2>
         <div className="buy-button">{price}</div>
