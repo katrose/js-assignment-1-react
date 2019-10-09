@@ -41,9 +41,18 @@ class NavBar extends Component {
 
 class TileContainer extends Component {
   render() {
+    
+    let tiles = [];
+
     this.props.data.forEach((article) => {
-      console.log(article);
-    })
+      tiles.push(
+        <Tile 
+          topic = {article.topic}
+          title = {article.title}
+          price = {article.price}
+          color = {article.color} />
+      )
+    });
 
     return (
       <section className="section">
@@ -56,20 +65,29 @@ class TileContainer extends Component {
           </div>
         </div>
         <div className="container">
-            <div className='card-row' id='content'></div>
+            <div className='card-row' id='content'>{tiles}</div>
         </div>
     </section>
     )
   }
 }
 
-// class Tile extends Component {
-//   render() {
-//     return(
+class Tile extends Component {
+  render() {
 
-//     )
-//   }
-// }
+    let topic = this.props.topic;
+    let title = this.props.title;
+    let price = "Read for " + this.props.price;
+
+    return(
+      <div className="card">
+        <p className="topic">{topic}</p>
+        <h2 className="title">{title}</h2>
+        <div className="buy-button">{price}</div>
+      </div>
+    )
+  }
+}
 
 const green = 'rgba(118,174, 170, 1)'
 const black = 'rgba(23,35, 50, 1)'
