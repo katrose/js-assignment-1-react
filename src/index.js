@@ -74,7 +74,7 @@ class TileContainer extends Component {
         <div className="container">
             <div className='card-row' id='content'>{tiles}</div>
         </div>
-    </section>
+      </section>
     )
   }
 }
