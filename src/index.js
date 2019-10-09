@@ -1,21 +1,25 @@
-import React from 'react';
+import React, {Component, Fragment} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class App extends React.Component {
+class App extends Component {
   render() {
     return (
-      <NavBar/>
+      // Need opening and closing Fragment tags for "sibling" components
+      <Fragment>
+        <NavBar />
+        <TileContainer data={DATA}/>
+      </Fragment>
     )
   }
 }
 
-class NavBar extends React.Component {
+class NavBar extends Component {
   render() {
     return (
-      <nav class="navbar">
-        <div class="container">
-          <div class="logo"></div>
+      <nav className="navbar">
+        <div className="container">
+          <div className="logo"></div>
             <ul>
               <li>World</li>
               <li>Sports</li>
@@ -26,8 +30,8 @@ class NavBar extends React.Component {
               <li>Fashion</li>
               <li>Tech</li>
             </ul>
-            <span class="icon">
-              <i class="ion-ionic"></i>
+            <span className="icon">
+              <i className="ion-ionic"></i>
             </span>
         </div>
     </nav>
@@ -35,50 +39,82 @@ class NavBar extends React.Component {
   }
 }
 
-// const green = 'rgba(118,174, 170, 1)'
-// const black = 'rgba(23,35, 50, 1)'
-// const brown = 'rgba(205,164, 133, 1)'
-// const greenblue = 'rgba(62,171, 201, 1)'
-// const pink = 'rgba(254,156, 161, 1)'
-// const blue = 'rgba(98,189, 254, 1)'
+class TileContainer extends Component {
+  render() {
+    this.props.data.forEach((article) => {
+      console.log(article);
+    })
 
-// const data = [
-//     {
-//         topic: 'Food',
-//         title: 'Wake Up and Smell the Coffee',
-//         price: '$0.90',
-//         color: green
-//     },
-//     {
-//         topic: 'Architecture',
-//         title: 'The Brand New NASA Office',
-//         price: '$0.19',
-//         color: black
-//     },
-//     {
-//         topic: 'Travel',
-//         title: 'Experience the Saharan Sands',
-//         price: '$2.29',
-//         color: brown
-//     },
-//     {
-//         topic: 'Interior',
-//         title: '9 Air-Cleaning Plants Your Home Needs',
-//         price: '$0.09',
-//         color: greenblue
-//     },
-//     {
-//         topic: 'Food',
-//         title: 'One Month Sugar Detox',
-//         price: '$0.99',
-//         color: pink
-//     },
-//     {
-//         topic: 'Photography',
-//         title: 'Shooting Minimal Instagram Photos',
-//         price: '$0.29',
-//         color: blue
-//     }
-// ]
+    return (
+      <section className="section">
+        <div className="container">
+          <div>
+            <h1>Lifestyle.</h1>
+            <p>The latest and best lifestyle articles selected<br/>
+                by our editorial office.
+            </p>
+          </div>
+        </div>
+        <div className="container">
+            <div className='card-row' id='content'></div>
+        </div>
+    </section>
+    )
+  }
+}
+
+// class Tile extends Component {
+//   render() {
+//     return(
+
+//     )
+//   }
+// }
+
+const green = 'rgba(118,174, 170, 1)'
+const black = 'rgba(23,35, 50, 1)'
+const brown = 'rgba(205,164, 133, 1)'
+const greenblue = 'rgba(62,171, 201, 1)'
+const pink = 'rgba(254,156, 161, 1)'
+const blue = 'rgba(98,189, 254, 1)'
+
+const DATA = [
+    {
+        topic: 'Food',
+        title: 'Wake Up and Smell the Coffee',
+        price: '$0.90',
+        color: green
+    },
+    {
+        topic: 'Architecture',
+        title: 'The Brand New NASA Office',
+        price: '$0.19',
+        color: black
+    },
+    {
+        topic: 'Travel',
+        title: 'Experience the Saharan Sands',
+        price: '$2.29',
+        color: brown
+    },
+    {
+        topic: 'Interior',
+        title: '9 Air-Cleaning Plants Your Home Needs',
+        price: '$0.09',
+        color: greenblue
+    },
+    {
+        topic: 'Food',
+        title: 'One Month Sugar Detox',
+        price: '$0.99',
+        color: pink
+    },
+    {
+        topic: 'Photography',
+        title: 'Shooting Minimal Instagram Photos',
+        price: '$0.29',
+        color: blue
+    }
+]
 
 ReactDOM.render(<App />, document.getElementById('root'));
