@@ -33,7 +33,7 @@ nav .container ul li {
 }
 
 .logo {
-  background: url('/public/logo.svg');
+  background: url('/logo.svg');
   background-size: 24px;
   background-position: center;
   background-repeat: no-repeat;
