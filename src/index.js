@@ -54,10 +54,17 @@ class TileContainer extends Component {
       )
     });
 
+    // From original HTML (inline styles)
+    let styles = {
+      marginTop: '40px',
+      marginRight: '10px',
+      marginBottom: '40px'
+    }
+
     return (
       <section className="section">
         <div className="container">
-          <div>
+          <div style={styles}>
             <h1>Lifestyle.</h1>
             <p>The latest and best lifestyle articles selected<br/>
                 by our editorial office.
