@@ -1,5 +1,9 @@
 import React, {Component, Fragment} from 'react';
 import ReactDOM from 'react-dom';
+
+import {NavBar} from './components/NavBar.js'
+import {TileContainer} from './components/TileContainer.js'
+
 import './index.css';
 
 class App extends Component {
@@ -11,89 +15,6 @@ class App extends Component {
         <TileContainer data={DATA}/>
         <Footer />
       </Fragment>
-    )
-  }
-}
-
-class NavBar extends Component {
-  render() {
-    return (
-      <nav className="navbar">
-        <div className="container">
-          <div className="logo"></div>
-            <ul>
-              <li>World</li>
-              <li>Sports</li>
-              <li>Opinion</li>
-              <li><strong>Lifestyle</strong></li>
-              <li>Business</li>
-              <li>Culture</li>
-              <li>Fashion</li>
-              <li>Tech</li>
-            </ul>
-            <span className="icon">
-              <i className="ion-ionic"></i>
-            </span>
-        </div>
-      </nav>
-    )
-  }
-}
-
-class TileContainer extends Component {
-  render() {
-
-    let tiles = [];
-
-    this.props.data.forEach((article) => {
-      tiles.push(
-        <Tile 
-          topic = {article.topic}
-          title = {article.title}
-          price = {article.price}
-          color = {article.color} />
-      )
-    });
-
-    // From original HTML (inline styles)
-    let styles = {
-      marginTop: '40px',
-      marginLeft: '10px',
-      marginBottom: '40px'
-    }
-
-    return (
-      <section className="section">
-        <div className="container">
-          <div style={styles}>
-            <h1>Lifestyle.</h1>
-            <p>The latest and best lifestyle articles selected<br/>
-                by our editorial office.
-            </p>
-          </div>
-        </div>
-        <div className="container">
-            <div className='card-row' id='content'>{tiles}</div>
-        </div>
-      </section>
-    )
-  }
-}
-
-class Tile extends Component {
-  render() {
-
-    let topic = this.props.topic;
-    let title = this.props.title;
-    let price = "Read for " + this.props.price;
-    let color = this.props.color;
-
-    return(
-      <div className="card" style={{backgroundColor: color}}>
-        <p className="topic">{topic}</p>
-        <h2 className="title">{title}</h2>
-        <div className="buy-button">{price}</div>
-      </div>
     )
   }
 }
