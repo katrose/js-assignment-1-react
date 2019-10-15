@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-export class Tile extends Component {
+class Tile extends Component {
   render() {
 
     let topic = this.props.topic;
@@ -17,3 +17,5 @@ export class Tile extends Component {
     )
   }
 }
+
+export default Tile;

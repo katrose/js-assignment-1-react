@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
-import {Tile} from './Tile.js'
+import Tile from './Tile.js'
 
-export class TileContainer extends Component {
+class TileContainer extends Component {
   render() {
 
     let tiles = [];
@@ -41,3 +41,5 @@ export class TileContainer extends Component {
     )
   }
 }
+
+export default TileContainer;

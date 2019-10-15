@@ -1,8 +1,9 @@
 import React, {Component, Fragment} from 'react';
 import ReactDOM from 'react-dom';
 
-import {NavBar} from './components/NavBar.js'
-import {TileContainer} from './components/TileContainer.js'
+import NavBar from './components/NavBar.js'
+import TileContainer from './components/TileContainer.js'
+import Footer from './components/Footer.js'
 
 import './index.css';
 
@@ -15,22 +16,6 @@ class App extends Component {
         <TileContainer data={DATA}/>
         <Footer />
       </Fragment>
-    )
-  }
-}
-
-class Footer extends Component {
-  render() {
-    return(
-      <footer className="footer">
-        <div className="content has-text-centered">
-          <p>
-            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-          </p>
-        </div>
-    </footer>
     )
   }
 }
