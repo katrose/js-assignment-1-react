@@ -3,6 +3,10 @@ import Tile from './Tile.js'
 
 class TileContainer extends Component {
 
+  state = {
+    tiles: []
+  }
+
   render() {
 
     let tiles = [];
