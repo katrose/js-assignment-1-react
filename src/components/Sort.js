@@ -6,12 +6,14 @@ class Sort extends Component {
   }
   render() {
     return(
-      <div class="sort-container">
+      <div className="sort-container">
         <ul>
-            <li class="sort-button" onClick={}>Sort by topic</li>
-            <li class="sort-button" onClick={}>Sort by price</li>
+            <li className="sort-button" onClick={this.sort.bind(this, 'topic')}>Sort by topic</li>
+            <li className="sort-button" onClick={this.sort.bind(this, 'price')}>Sort by price</li>
         </ul>
       </div>
     )
   }
 }
+
+export default Sort;
