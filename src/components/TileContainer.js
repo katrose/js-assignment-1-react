@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Tile from './Tile.js'
 
 class TileContainer extends Component {
+
   render() {
 
     let tiles = [];
@@ -34,7 +35,7 @@ class TileContainer extends Component {
           </div>
         </div>
         <div className="container">
-            <div className='card-row' id='content'>{tiles}</div>
+          <div className='card-row' id='content'>{tiles}</div>
         </div>
       </section>
     )

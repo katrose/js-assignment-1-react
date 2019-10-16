@@ -57,7 +57,30 @@ nav .container ul li {
   }
 }
 
-/* TILES */
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+SORT BUTTONS
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+.sort-container {
+  margin-top: 1em;
+}
+
+.sort-container ul {
+  display: flex;
+}
+
+.sort-button {
+  padding: 8px 20px;
+  margin-right: .5em;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+CARDS
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 .card-row {
   display: flex;
   flex-wrap: wrap;
@@ -75,7 +98,7 @@ nav .container ul li {
       11px 11px 6px rgba(0, 0, 0, 0.05);
 }
 
-.card .buy-button {
+.buy-button {
   position: absolute;
   bottom: 20px;
   left: 20px;
