@@ -35,6 +35,12 @@ class TileContainer extends Component {
           </div>
         </div>
         <div className="container">
+          <div className="sort-container" style={styles}>
+            <ul>
+                <li><Button class="sort-button" text="Sort by name" /></li>
+                <li><Button class="sort-button" text="Sort by price" /></li>
+            </ul>
+          </div>
           <div className='card-row' id='content'>{tiles}</div>
         </div>
       </section>
