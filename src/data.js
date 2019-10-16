@@ -1,3 +1,5 @@
+// Data array provided in assignment
+
 const green = 'rgba(118,174, 170, 1)'
 const black = 'rgba(23,35, 50, 1)'
 const brown = 'rgba(205,164, 133, 1)'

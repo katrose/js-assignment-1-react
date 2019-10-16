@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import Tile from './Tile.js'
 
 class TileContainer extends Component {

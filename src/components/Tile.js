@@ -1,18 +1,13 @@
 import React, {Component} from 'react';
+import Button from './Button.js'
 
 class Tile extends Component {
   render() {
-
-    let topic = this.props.topic;
-    let title = this.props.title;
-    let price = "Read for " + this.props.price;
-    let color = this.props.color;
-
     return(
-      <div className="card" style={{backgroundColor: color}}>
-        <p className="topic">{topic}</p>
-        <h2 className="title">{title}</h2>
-        <div className="buy-button">{price}</div>
+      <div className="card" style={{backgroundColor: this.props.color}}>
+        <p className="topic">{this.props.topic}</p>
+        <h2 className="title">{this.props.title}</h2>
+        <Button price={this.props.price}></Button>
       </div>
     )
   }
